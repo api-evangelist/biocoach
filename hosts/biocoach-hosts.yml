@@ -1,0 +1,34 @@
+generated: '2026-09-28'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 2
+  own: 2
+  other_domain: 0
+  platform: 0
+  roles:
+  - api
+  - website
+hosts:
+- host: api.biocoach.health
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: biocoach.health
+  role: api
+  relation: own
+- host: biocoach.health
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  types:
+  - Newsroom
+  - Website
+  serves: []
+  registrable_domain: biocoach.health
+  role: website
+  relation: own

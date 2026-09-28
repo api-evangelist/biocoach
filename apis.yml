@@ -1,23 +1,61 @@
 aid: biocoach
+
 name: BioCoach
-description: 'BioCoach is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'BioCoach is a digital health company based in Minneapolis, Minnesota, offering personalized nutrition and metabolic health support through AI‑driven meal planning, glucose and ketone monitoring hardware, and subscription‑based coaching. It aims to help employees stay healthy year‑round, reducing healthcare costs for employers while providing tools for pre‑diabetes, obesity, and overall wellness.'
+
 url: https://raw.githubusercontent.com/api-evangelist/biocoach/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-28'
+
 modified: '2026-09-28'
+
 tags:
+- Health
+- DigitalHealth
+- Nutrition
+- AI
+- Longevity
 - Company
-apis: []
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/biocoach-hosts.yml
+- type: Newsroom
+  url: https://biocoach.health/news/
+- type: DomainSecurity
+  url: security/biocoach-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://biocoach.health
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI or other machine‑readable contract was found at typical endpoints.
+  evidence:
+    - url: https://api.biocoach.health/openapi.json
+      status: 404
+  checked: '2026-09-28'
+x-enrichment:
+  date: '2026-09-28'
+  status: enriched
+  artifacts_added: 4
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
